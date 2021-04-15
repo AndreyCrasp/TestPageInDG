@@ -19,11 +19,11 @@
             </DataGrid.Columns>
         </DataGrid>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
-                <Button Content="Start" Click="BtnStartClick"/>
+            <Button Content="Start" Click="BtnStartClick" x:Name="BtnStart"/>
                 <Button Content="Prev" Click="BtnPrevClick"/>
-                <Button Content="Next" Click="BtnNextClick"/>
-                <Button Content="End" Click="BtnEndClick"/>
             <TextBox x:Name="TbPage" Width="50" Margin="5 0 5 0" KeyDown="TbKeyDown"/>
+                <Button Content="Next" Click="BtnNextClick"/>
+            <Button Content="End" Click="BtnEndClick" x:Name="BtnEnd"/>
         </StackPanel>
     </Grid>
 </Window>

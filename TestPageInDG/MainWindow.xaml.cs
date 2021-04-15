@@ -32,7 +32,10 @@ namespace TestPageInDG
 
         private void Update()
         {
-            countPage = db.Employees.ToList().Count() / 5;
+            if (currentPage == countPage) BtnEnd.IsEnabled = false; else BtnEnd.IsEnabled = true;
+            if (currentPage == 1) BtnStart.IsEnabled = false;
+            else BtnStart.IsEnabled = true;
+             countPage = db.Employees.ToList().Count() / 5;
             DG.ItemsSource = db.Employees.ToList().GetRange((currentPage-1) * 5, 5);
         }
 
